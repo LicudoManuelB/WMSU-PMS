@@ -210,7 +210,6 @@
               <a class="dropdown-item btn-export" href="#" onclick="exportTableToExcel('account-title-table','account_title')"><span><i class="fas fa-file-csv"></i></span> Export</a>
               <a class="dropdown-item btn-export" href="#"><span><i class="fas fa-file-csv"></i></span> Import</a>
             </div>
-          
           </div>
           </div>
             </div>

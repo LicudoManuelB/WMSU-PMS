@@ -84,3 +84,9 @@ img{
     }
 
 }
+
+@media(max-width:520px){
+    .inputs{
+        margin: 20px;
+    }
+}

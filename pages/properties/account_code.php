@@ -25,6 +25,7 @@
           <!-- search input -->
           <div class="tool-bar">
             <input type="text" class="form-control search-input" placeholder="search">
+            <div class="tool-bar-btn">
             <div class="custom-dropdown">
             <div class="dropdown">
             
@@ -47,8 +48,9 @@
             </div>
           
           </div>
-          </div>
             </div>
+          </div>
+         </div>
           
          <div class="table-responsive table-container"> 
             <!-- table -->

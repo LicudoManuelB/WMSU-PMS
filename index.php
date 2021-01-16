@@ -27,6 +27,7 @@
             <div class="row justify-content-center">
             <form class="customForm">
                 <img class="wmsu-logo" src="img/wmsu.png" alt="wmsu-logo">
+                <div class="inputs">
                 <div class="input-group mb-5">
                     <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -40,6 +41,7 @@
                     <input type="password" class="form-control" name="password" placeholder="password" >
                  </div>
                  <a class="forgot-password" href="#">Forgot Password?</a>
+                </div>
                  <br>
                 <div class="text-center">
                     <a class="btn btn-lg bg-secondary text-light" href="pages/properties/home.php">Log-in</a>

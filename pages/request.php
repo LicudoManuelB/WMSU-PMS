@@ -10,21 +10,24 @@
 <input type="text" class="form-control search-input m-2" placeholder="search">
             
             <?php 
-                  for($i = 5; $i >= 0; $i--){
+                  $count = 1;
+                  for($i = 5; $i > 0; $i--){
+                    
             ?>
-      
-                    <div class="row">
+          <div class="data-content">
+          <div class="row">
                         <div class="col-md-6 col-sm-12">
                         <div class="card mb-3" style="max-width: 540px;">
                           <div class="row g-0">
-                            <div class="col-md-4">
-                              <img class="card-image" src="../../img/building-sample.jpg" alt="building">
+                            <div class="col-md-4 request-image">
+                              <img class="card-image" src="../../img/users/user<?=$i?>.jpg" alt="building">
+                              <img class="card-image user-request-img" src="../../img/equipments/projector.jpg" alt="building">
                             </div>
                             <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <h6 class="card-title">User<?=$i?></h6>
+                                <p class="card-text">Request to borrow <b>projector</b></p>
+                                <p class="card-text"><small class="text-muted">3 minutes ago</small></p>
                                 <button type="submit" class="btn btn-success">Accept</button>
                                 <button type="submit" class="btn btn-danger">Deny</button>
                               </div>
@@ -35,24 +38,26 @@
       
                         <div class="col-md-6 col-sm-12">
                         <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img class="card-image" src="../../img/building-sample.jpg" alt="building">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                  <button type="submit" class="btn btn-success">Accept</button>
+                          <div class="row g-0">
+                            <div class="col-md-4 request-image">
+                              <img class="card-image" src="../../img/users/user<?=$i?>.jpg" alt="building">
+                              <img class="card-image user-request-img" src="../../img/users/user<?=$count==3?2:$count; ?>.jpg" alt="building">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h6 class="card-title">User<?=$i?></h6>
+                                <p class="card-text">Request to transfer <b>projector</b> to <b>User<?=$count==3?2:$count; ?></b></p>
+                                <p class="card-text"><small class="text-muted">3 minutes ago</small></p>
+                                <button type="submit" class="btn btn-success">Accept</button>
                                 <button type="submit" class="btn btn-danger">Deny</button>
-                                </div>
                               </div>
                             </div>
-                         </div>
+                          </div>
+                       </div>
                         </div>
                   </div>
-            <?php } ?>
+            <?php $count++; } ?>
+          </div>
 </div>
                   </div>
 <!-- footer -->
