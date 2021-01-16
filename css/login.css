@@ -1,0 +1,86 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.2rem;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+.mainContainer{
+    overflow-x: hidden;
+}
+
+.title{
+    color: #BD0000;
+    margin: 20px 0px;
+    font-family: 'Texturina', serif;
+    font-size: 30px;
+}
+
+img{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.illustration{
+    z-index: 9999;
+}
+
+.customForm{
+    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.input-group{
+    margin: 10px 0px;
+}
+
+.input-group span{
+    color: white;
+    background-color: #BD0000;
+}
+
+.wmsu-logo{
+    width: 100px;
+    height: 100px;
+    display: absolute;
+    margin: auto;
+    margin-top: -50px;
+}
+
+.forgot-password{
+    font-weight: bold;
+    color:  #BD0000;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@media(max-width:991px){
+    .title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .illustration, .wave{
+        display: none;
+    }
+
+    .customForm{
+        margin-top: 50px;
+    }
+
+}
