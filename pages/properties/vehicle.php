@@ -7,11 +7,10 @@
 ?>
 <!-- content -->
 <div class="content mb-5">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs bg-dark">
     <li class="nav-item"><a class="nav-link active" href="#1" data-toggle="tab">Overview</a></li>
     <li class="nav-item"><a class="nav-link" href="#2" data-toggle="tab">Manage</a></li>
     <li class="nav-item"><a class="nav-link" href="#3" data-toggle="tab">Maintenance</a></li>
-    <li class="nav-item"><a class="nav-link" href="#4" data-toggle="tab">Request</a></li>
   </ul>
   <div class="container">
     
@@ -22,7 +21,8 @@
             <input type="text" class="form-control search-input m-2" placeholder="search">
             
       <?php 
-            for($i = 5; $i >= 0; $i--){
+            $count = 1;
+            for($i = 5; $i > 0; $i--){
       ?>
 
               <div class="row">
@@ -34,10 +34,16 @@
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Sample Vehicle</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <h5 class="card-title">Vehicle <?=$i?></h5>
+                          <p>Model: Isuzu</p>
+                          <p>Month renewal: June 23</p>
+                          
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                           <button type="submit" class="btn btn-warning">Update</button>
+                           <!-- Button trigger modal -->
+                           <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              More Info
+                            </button>
                         </div>
                       </div>
                     </div>
@@ -52,10 +58,15 @@
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">Sample Vehicle</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <h5 class="card-title">Vehicle <?=$count?> <?php $count++; ?></h5>
+                          <p>Model: Isuzu</p>
+                          <p>Month renewal: June 23</p>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             <button type="submit" class="btn btn-warning">Update</button>
+                             <!-- Button trigger modal -->
+                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              More Info
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -73,19 +84,24 @@
           <!-- form -->
             <form action="" class="custom-form">
                 <img src="../../img/car.svg" alt="document icon" class="form-logo">
-                <input type="text"  placeholder="Building Name">
-                <input type="text"  placeholder="Location">
-                <input type="text"  placeholder="Number of Floors">
-                <input type="text"  placeholder="Number of Rooms">
-                <input type="text"  placeholder="Total Floor Area">
-                <input type="text"  placeholder="Account Title">
-                <input type="select"  placeholder="Account Code">
-                <input type="text"  placeholder="Building Type">
+                <input type="text"  placeholder="Model">
                 <div class="form-group pt-2">
-                 <label>Date of Construction:</label>  
-                 <input type="date"  placeholder="Date of Construction"> 
+                 <label>Month Renewal:</label>  
+                 <input type="date"  placeholder="Date of Repair"> 
                 </div>
-                <input type="text"  placeholder="Cost of Construction">
+                <input type="text"  placeholder="Acquisition">
+                <input type="text"  placeholder="Cost">
+                <div class="form-group pt-2">
+                 <label>Date Acquired:</label>  
+                 <input type="date"  placeholder="Date of Repair"> 
+                </div>
+                <input type="text"  placeholder="Current Use">
+                <input type="select"  placeholder="Remarks">
+                <input type="text"  placeholder="How Acquired">
+                <input type="text"  placeholder="Unit">
+                <input type="text"  placeholder="Product Order Number">
+                <input type="text"  placeholder="Aid">
+                <input type="text"  placeholder="Property ID">
                 <button class="btn btn-primary" id="save">Save</button>
                 <button class="btn btn-warning">Clear</button>
             </form>
@@ -173,14 +189,13 @@
           <!-- form -->
             <form action="" class="custom-form">
                 <img src="../../img/car.svg" alt="document icon" class="form-logo">
-                <input type="text"  placeholder="Building Name">
+                <input type="text"  placeholder="Model">
                 <div class="form-group pt-2">
-                 <label>Date of Construction:</label>  
-                 <input type="date"  placeholder="Date of Construction"> 
+                 <label>Date of Repair:</label>  
+                 <input type="date"  placeholder="Date of Repair"> 
                 </div>
-                <input type="text"  placeholder="Cost of Construction">
+                <input type="text"  placeholder="Cost of Repair">
                 <input type="text"  placeholder="Repair Description">
-                <input type="text"  placeholder="How Acquired">
 
                 <button class="btn btn-primary" id="save">Save</button>
                 <button class="btn btn-warning">Clear</button>
@@ -262,61 +277,36 @@
   </div>
   <hr>
    </div>
-   <!-- building request from user -->
-   <div class="tab-pane" id="4">
-   <input type="text" class="form-control search-input m-2" placeholder="search">
-            
-            <?php 
-                  for($i = 5; $i >= 0; $i--){
-            ?>
-      
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                        <div class="card mb-3" style="max-width: 540px;">
-                          <div class="row g-0">
-                            <div class="col-md-4">
-                              <img class="card-image" src="../../img/vehicle-sample.jpg" alt="building">
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-body">
-                                <h5 class="card-title">Sample Vehicle</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <button type="submit" class="btn btn-success">Accept</button>
-                                <button type="submit" class="btn btn-danger">Deny</button>
-                              </div>
-                            </div>
-                          </div>
-                       </div>
-                        </div>
-      
-                        <div class="col-md-6 col-sm-12">
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img class="card-image" src="../../img/no-image.png" alt="building">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Sample Vehicle</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                  <button type="submit" class="btn btn-success">Accept</button>
-                                <button type="submit" class="btn btn-danger">Deny</button>
-                                </div>
-                              </div>
-                            </div>
-                         </div>
-                        </div>
-                  </div>
-            <?php } ?>
-   </div>
-  </div>
-  <!-- end of tab 1 -->
-   
-
   </div>
   
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-light" id="exampleModalLabel">Vehicle Details</h5>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+          <p>Model: Isuzu</p>
+          <p>Month renewal: June 23</p>
+          <p>Acquisition: </p>
+          <p>Cost: 90,000</p>
+          <p>Date Acquired: June 23 2000</p>
+          <p>Remarks: Good</p>
+          <p>How acquired: Cash</p>
+          <p>Unit: 5</p>
+          <p>Product order number: </p>
+          <p>aid: </p>
+          <p>Property ID:</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
 <!-- footer -->
 <?php require_once "../../common/footer.php"; ?>

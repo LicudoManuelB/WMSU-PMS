@@ -7,11 +7,10 @@
 ?>
 <!-- content -->
 <div class="content mb-5">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs bg-dark">
     <li class="nav-item"><a class="nav-link active" href="#1" data-toggle="tab">Overview</a></li>
     <li class="nav-item"><a class="nav-link" href="#2" data-toggle="tab">Manage</a></li>
     <li class="nav-item"><a class="nav-link" href="#3" data-toggle="tab">Maintenance</a></li>
-    <li class="nav-item"><a class="nav-link" href="#4" data-toggle="tab">Request</a></li>
   </ul>
   <div class="container">
     
@@ -39,7 +38,7 @@
                           <p>floor area: 10sqm</p>
                           <p><small class="text-muted">Last updated 3 mins ago</small></p>
                           <button type="submit" class="btn btn-warning">Update</button>
-                                         <!-- Button trigger modal -->
+                          <!-- Button trigger modal -->
                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                               More Info
                             </button>
@@ -272,57 +271,6 @@
   </div>
   <hr>
    </div>
-   <!-- building request from user -->
-   <div class="tab-pane" id="4">
-   <input type="text" class="form-control search-input m-2" placeholder="search">
-            
-            <?php 
-                  for($i = 5; $i >= 0; $i--){
-            ?>
-      
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                        <div class="card mb-3" style="max-width: 540px;">
-                          <div class="row g-0">
-                            <div class="col-md-4">
-                              <img class="card-image" src="../../img/no-image.png" alt="building">
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">10 minutes ago</small></p>
-                                <button type="submit" class="btn btn-success">Accept</button>
-                                <button type="submit" class="btn btn-danger">Deny</button>
-                              </div>
-                            </div>
-                          </div>
-                       </div>
-                        </div>
-      
-                        <div class="col-md-6 col-sm-12">
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img class="card-image" src="../../img/building-sample.jpg" alt="building">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p class="card-text"><small class="text-muted">1 hour ago</small></p>
-                                  <button type="submit" class="btn btn-success">Accept</button>
-                                <button type="submit" class="btn btn-danger">Deny</button>
-                                </div>
-                              </div>
-                            </div>
-                         </div>
-                        </div>
-                  </div>
-            <?php } ?>
-   </div>
-  </div>
-  <!-- end of tab 1 -->
   </div>
   
 </div>

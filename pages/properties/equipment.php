@@ -7,7 +7,7 @@
 ?>
 <!-- content -->
 <div class="content mb-5">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs bg-dark">
     <li class="nav-item"><a class="nav-link active" href="#1" data-toggle="tab">Overview</a></li>
     <li class="nav-item"><a class="nav-link" href="#2" data-toggle="tab">Manage</a></li>
     <li class="nav-item"><a class="nav-link" href="#3" data-toggle="tab">Maintenance</a></li>
@@ -22,7 +22,8 @@
             <input type="text" class="form-control search-input m-2" placeholder="search">
             
       <?php 
-            for($i = 5; $i >= 0; $i--){
+            $count = 1;
+            for($i = 5; $i > 0; $i--){
       ?>
 
               <div class="row">
@@ -34,10 +35,17 @@
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Equipment Sample</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <h5 class="card-title">Equipment <?=$i?></h5>
+                          <p>Property number: 200</p>
+                          <p>Product order Number: </p>
+                          <p>RIS number:</p>
+                          <p>Acquired From: Company Name</p>
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          <button type="submit" class="btn btn-secondary">Update</button>
+                          <button type="submit" class="btn border-secondary" href="2">Update</button>
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              More Info
+                            </button>
                         </div>
                       </div>
                     </div>
@@ -52,10 +60,18 @@
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">Equipment Sample</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">Equipment <?=$count?> <?php $count++; ?></h5>
+                            <p>Property number: 200</p>
+                            <p>Product order Number: </p>
+                            <p>RIS number:</p>
+                            <p>Acquired From: Company Name</p>
+              
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button type="submit" class="btn btn-secondary">Update</button>
+                            <button type="submit" class="btn border-secondary">Update</button>
+                             <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              More Info
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -318,5 +334,39 @@
   </div>
   
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-light" id="exampleModalLabel">Equipment Details</h5>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+            <p>Property number: 200</p>
+            <p>Product order Number: </p>
+            <p>RIS number:</p>
+            <p>Acquired From: Company Name</p>
+            <p>Document Type: </p>
+            <p>Units: 10</p>
+            <p>Unit Value: 2000</p>
+            <p>Current Value: 2000</p>
+            <p>Total: 4000</p>
+            <p>Funding: </p>
+            <p>Year Purchased: </p>
+            <p>Date Purchased: </p>
+            <p>Remarks: </p>
+            <p>Status: </p>
+            <p>Latest Decaprecated Date: </p>
+            <p>Property ID: </p>
+            <p>User: </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
 <!-- footer -->
 <?php require_once "../../common/footer.php"; ?>
