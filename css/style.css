@@ -175,6 +175,11 @@ table td>a>.delete:hover{
 .transaction-data{
 }
 
+.building-data{
+    line-height: 1em;
+    font-size: 14px;
+}
+
 
 @media(max-width:760px){
     .data-content{

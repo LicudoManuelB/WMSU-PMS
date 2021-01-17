@@ -32,11 +32,17 @@
                         <img class="card-image" src="../../img/no-image.png" alt="building">
                       </div>
                       <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Sample Building</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sapiente laudantium laborum dolor, tempora nisi!</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="card-body building-data">
+                          <h5 class="card-title">Building <?=$i?></h5>
+                          <p>location: Normal Road Baliwasan Zamboanga City</p>
+                          <p>floors: 2</p>
+                          <p>floor area: 10sqm</p>
+                          <p><small class="text-muted">Last updated 3 mins ago</small></p>
                           <button type="submit" class="btn btn-warning">Update</button>
+                                         <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              More Info
+                            </button>
                         </div>
                       </div>
                     </div>
@@ -50,12 +56,18 @@
                           <img class="card-image" src="../../img/building-sample.jpg" alt="building">
                         </div>
                         <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Sample Building</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nobis earum voluptatem recusandae nostrum aliquid?</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button type="submit" class="btn btn-warning">Update</button>
-                          </div>
+                        <div class="card-body building-data">
+                          <h5 class="card-title">Building <?=$i?></h5>
+                          <p>location: Normal Road Baliwasan Zamboanga City</p>
+                          <p>floors: 2</p>
+                          <p>floor area: 10sqm</p>
+                          <p><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <button type="submit" class="btn btn-warning">Update</button>
+                          <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        More Info
+                      </button>
+                        </div>
                         </div>
                       </div>
                    </div>
@@ -311,11 +323,36 @@
    </div>
   </div>
   <!-- end of tab 1 -->
-   
-
   </div>
   
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-light" id="exampleModalLabel">Building Details</h5>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+          <p>Location: Normal Road, Baliwasan, Zamboanga City.</p>
+          <p>Floors: 2</p>
+          <p>Floor area: 10sqm</p>
+          <p>Rooms: 10</p>
+          <p>Construction date: Aug, 10,2020</p>
+          <p>Construction cost: Php 1,000,000</p>
+          <p>Current use: ICS Building</p>
+          <p>Type: Residential</p>
+          <p>Useful Years: lifetime</p>
+          <p>Current Value:</p>
+          <p>Cost per area: Php 100,000</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
 <!-- footer -->
 <?php require_once "../../common/footer.php"; ?>
