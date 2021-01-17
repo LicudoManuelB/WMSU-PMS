@@ -151,26 +151,6 @@
             <!-- end of row -->
              <!-- card row -->
     <div class="row justify-content-center">
-            <!-- card -->
-            <div class="col-lg-3 m-1">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h2><span><i class="fas fa-box-open"></i></span> 22</h2>
-                    <h5>Transfers</h5>
-                </div>
-            </div>
-            </div>
-            <!-- end of card -->
-             <!-- card -->
-             <div class="col-lg-3 m-1">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h2><span><i class="fas fa-box-open"></i></span> 22</h2>
-                    <h5>Logs</h5>
-                </div>
-            </div>
-            </div>
-            <!-- end of card -->
              <!-- card -->
             </div>
             <!-- end of card -->
@@ -197,7 +177,7 @@
                                 <div class="col-md-4">
                                 <div class="card-body">
                                     <h5 class="card-title">user<?=$i?></h5>
-                                    <p class="card-text">Returned the projector.</p>
+                                    <p class="card-text">Returned the equipment.</p>
                                     <p class="card-text"><small class="text-muted"><?=$i*5?> minutes ago</small></p>
                                 </div>
                                 </div>
@@ -228,7 +208,7 @@
                                 <div class="col-md-4">
                                 <div class="card-body">
                                     <h5 class="card-title">user<?=$i?></h5>
-                                    <p class="card-text">Returned the projector.</p>
+                                    <p class="card-text">Request to borrow equipment.</p>
                                     <p class="card-text"><small class="text-muted"><?=$i*5?> minutes ago</small></p>
                                 </div>
                                 </div>

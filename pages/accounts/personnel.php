@@ -19,7 +19,8 @@
             
             <input type="text" class="form-control search-input m-2" placeholder="search">
       <?php 
-            for($i = 5; $i >= 0; $i--){
+            $count = 1;
+            for($i = 5; $i > 0; $i--){
       ?>
 
               <div class="row">
@@ -27,11 +28,11 @@
                   <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
-                        <img class="card-image card-profile" src="../../img/no-image.png" alt="building">
+                        <img class="card-image card-profile" src="../../img/users/user<?=$i?>.jpg" alt="building">
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Sample Building</h5>
+                          <h5 class="card-title">Personnel <?=$i?></h5>
                           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sapiente laudantium laborum dolor, tempora nisi!</p>
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                           <button type="submit" class="btn btn-warning">Update</button>
@@ -45,11 +46,11 @@
                   <div class="card mb-3" style="max-width: 540px;">
                       <div class="row g-0">
                         <div class="col-md-4">
-                          <img class="card-image card-profile" src="../../img/personnel.jpg" alt="building">
+                          <img class="card-image card-profile" src="../../img/users/user<?=$count?>.jpg <?php $count++;?>" alt="building">
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">Sample Building</h5>
+                            <h5 class="card-title">Personnel <?=$i?></h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nobis earum voluptatem recusandae nostrum aliquid?</p>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             <button type="submit" class="btn btn-warning">Update</button>
