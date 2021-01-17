@@ -40,9 +40,6 @@
       <li class="nav-item">
         <a class="nav-link" href="../transaction.php"><span><i class="fas fa-thumbtack"></i></span> Transactions</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../transfer.php"><span><i class="fas fa-user-friends"></i></span> Transfers</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <span><i class="fas fa-address-book"></i></span> Others

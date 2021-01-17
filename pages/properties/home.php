@@ -180,51 +180,61 @@
 </div>
         <div class="container mt-2">
             <!-- latest 5 data in the record using table -->
-         <div class="row justify-content-center">
+         <div class="row">
            <div class="col-lg-12">
            <div class="card">
             <div class="card-header text-center bg-dark text-light">
               <h5>Latest transactions</h5>
             </div>
-            <div class="card-body">
-            <table class="table table-striped table-hover table-responsive-sm">
-                    <tr class="bg-secondary text-light">
-                        <th>#</th>
-                        <th>First name</th>
-                        <th>Middle name</th>
-                        <th>Last name</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                    </tr>
-                        <tr>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                        </tr>       
-                        <tr>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                        </tr>    
-                        <tr>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                            <td>Lorem</td>
-                        </tr>    
-                </table>
+            <div class="card-body transaction-data">
+                <?php for($i=3; $i>0; $i--){ ?>
+
+                    <div class="card mb-3">
+                            <div class="row">
+                                <div class="col-md-2">
+                                <img src="../../img/users/user<?=$i?>.jpg" class="user-photo" alt="user-photo">
+                                </div>
+                                <div class="col-md-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">user<?=$i?></h5>
+                                    <p class="card-text">Returned the projector.</p>
+                                    <p class="card-text"><small class="text-muted"><?=$i*5?> minutes ago</small></p>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                <?php } ?>
+            </div>
+          </div>
+           </div>
+         </div>
+        </div>
+        <div class="container mt-2">
+            <!-- latest 5 data in the record using table -->
+         <div class="row">
+           <div class="col-lg-12">
+           <div class="card">
+            <div class="card-header text-center bg-dark text-light">
+              <h5>Latest Request</h5>
+            </div>
+            <div class="card-body transaction-data">
+                <?php for($i=1; $i<=3; $i++){ ?>
+
+                    <div class="card mb-3">
+                            <div class="row">
+                                <div class="col-md-2">
+                                <img src="../../img/users/user<?=$i?>.jpg" class="user-photo" alt="user-photo">
+                                </div>
+                                <div class="col-md-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">user<?=$i?></h5>
+                                    <p class="card-text">Returned the projector.</p>
+                                    <p class="card-text"><small class="text-muted"><?=$i*5?> minutes ago</small></p>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                <?php } ?>
             </div>
           </div>
            </div>
